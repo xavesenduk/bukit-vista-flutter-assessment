@@ -63,11 +63,11 @@ class ItemCard extends StatelessWidget {
                         // if empty, use white color to avoid error
                         guestPicture == ''
                             ? const CircleAvatar(
-                                radius: 25,
+                                radius: 30,
                                 backgroundColor: Colors.white,
                               )
                             : CircleAvatar(
-                                radius: 25,
+                                radius: 30,
                                 backgroundImage: AssetImage(guestPicture),
                               ),
                         const SizedBox(width: 16),
