@@ -6,13 +6,15 @@ class BackButtonNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      color: Colors.white,
-      icon: const Icon(Icons.arrow_back_ios),
-      onPressed: (() {
-        Navigator.pop(context);
-      }),
+    return Padding(
       padding: const EdgeInsets.only(left: 30),
+      child: IconButton(
+        color: Colors.white,
+        icon: const Icon(Icons.arrow_back_ios),
+        onPressed: (() {
+          Navigator.pop(context);
+        }),
+      ),
     );
   }
 }
