@@ -1,0 +1,82 @@
+{
+    "items": [
+      {
+        "id": "1",
+        "photo": "assets/guest_picture/haylie.png",
+        "name": "Haylie Gouse",
+        "origin": "Oslo, Finland",
+        "email": "HaylieGouse@gmail.com",
+        "phone": "+3108128198",
+        "bookings": [
+            {
+                "id": "1",
+                "bookingid": "HMASJKSSCL",
+                "status": "Confirmed",
+                "location": "Pondok Lulik #20",
+                "checkin": "14 Dec 2021",
+                "checkout": "14 Jan 2022"
+            },
+            {
+                "id": "2",
+                "bookingid": "HMASJKSSCL",
+                "status": "Canceled",
+                "location": "Atra Bamboology",
+                "checkin": "14 Dec 2021",
+                "checkout": "14 Jan 2022",
+                "details": [
+                    {
+                        "checkintime": "14:30",
+                        "checkindate": "Aug 31, 2020",
+                        "checkouttime": "10:30",
+                        "checkoutdate": "Sep 31, 2020",
+                        "nights": "3 Nights",
+                        "guest": "2",
+                        "value": "$ 31.01",
+                        "phone": "082123892893",
+                        "host": "Rafik Bukit Vista",
+                        "profile": "Bayu & Wayan",
+                        "property": "ME Villa - B (1BR)",
+                        "listing": "4BR Homey Villa in Uluwatu | Kitchen + Wifi + Pool"
+                    }
+                ]
+            }
+        ]
+      },
+      {
+        "id": "2",
+        "photo": "assets/guest_picture/jordyn.png",
+        "name": "Jordyn Levin",
+        "origin": "New York, USA"
+      },
+      {
+        "id": "3",
+        "photo": "assets/guest_picture/charlie.png",
+        "name": "Charlie Ekstrom Bothman",
+        "origin": "California, USA"
+      },
+      {
+        "id": "4",
+        "photo": "assets/guest_picture/wilson.png",
+        "name": "Wilson Workman",
+        "origin": "Berlin, Germany"
+      },
+      {
+        "id": "5",
+        "photo": "assets/guest_picture/cooper.png",
+        "name": "Cooper Siphron",
+        "origin": "Paris, France"
+      },
+      {
+        "id": "6",
+        "photo": "assets/guest_picture/skylar.png",
+        "name": "Skylar Calzoni",
+        "origin": "Moscow, Rusia"
+      },
+      {
+        "id": "7",
+        "photo": "assets/guest_picture/skylar.png",
+        "name": "Skylar Calzoni",
+        "origin": "Moscow, Rusia"
+      }
+    ]
+  }
