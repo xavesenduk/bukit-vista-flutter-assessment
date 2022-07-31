@@ -1,24 +1,40 @@
+import 'package:bukit_vista_flutter_assessment/screens/details.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // Item card component, to display guest information in a list view.
 class ItemCard extends StatelessWidget {
   final String guestName, guestPicture, guestOrigin;
+  final List guestDetails;
   const ItemCard(
       {Key? key,
       required this.guestName,
       required this.guestPicture,
-      required this.guestOrigin})
+      required this.guestOrigin,
+      required this.guestDetails})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 4.5),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
       child: Row(
         children: [
           Expanded(
               child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              // Check if guest has any bookings data in the json
+              if (guestDetails.toString() != "[null]") {
+                debugPrint("guestDetails == ${guestDetails.toString()}");
+                Navigator.push(context, CupertinoPageRoute(builder: (builder) {
+                  return Details(
+                    guestDetails: guestDetails,
+                  );
+                }));
+              } else {
+                debugPrint("No details");
+              }
+            },
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: const BorderRadius.all(Radius.circular(8)),
@@ -74,13 +90,14 @@ class ItemCard extends StatelessWidget {
                         )
                       ],
                     ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.arrow_forward_ios,
-                          color: Color(0xFF359BE5),
-                          size: 18,
-                        ))
+                    const Padding(
+                      padding: EdgeInsets.only(right: 10),
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color(0xFF359BE5),
+                        size: 18,
+                      ),
+                    )
                   ],
                 ),
               ),
