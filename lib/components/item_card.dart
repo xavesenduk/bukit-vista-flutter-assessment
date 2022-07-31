@@ -4,14 +4,17 @@ import 'package:flutter/material.dart';
 
 // Item card component, to display guest information in a list view.
 class ItemCard extends StatelessWidget {
-  final String guestName, guestPicture, guestOrigin;
+  final String guestName, guestPicture, guestOrigin, guestId;
   final List guestDetails;
+  final bool showDetailsButton;
   const ItemCard(
       {Key? key,
       required this.guestName,
       required this.guestPicture,
       required this.guestOrigin,
-      required this.guestDetails})
+      required this.guestDetails,
+      required this.guestId,
+      required this.showDetailsButton})
       : super(key: key);
 
   @override
@@ -24,15 +27,18 @@ class ItemCard extends StatelessWidget {
               child: GestureDetector(
             onTap: () {
               // Check if guest has any bookings data in the json
-              if (guestDetails.toString() != "[null]") {
-                debugPrint("guestDetails == ${guestDetails.toString()}");
-                Navigator.push(context, CupertinoPageRoute(builder: (builder) {
-                  return Details(
-                    guestDetails: guestDetails,
-                  );
-                }));
-              } else {
-                debugPrint("No details");
+              if (showDetailsButton) {
+                if (guestDetails.toString() != "[]") {
+                  debugPrint("guestDetails == ${guestDetails.toString()}");
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (builder) {
+                    return Details(
+                      guestId: guestId,
+                    );
+                  }));
+                } else {
+                  debugPrint("No details");
+                }
               }
             },
             child: Container(
@@ -90,14 +96,16 @@ class ItemCard extends StatelessWidget {
                         )
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: Color(0xFF359BE5),
-                        size: 18,
-                      ),
-                    )
+                    showDetailsButton
+                        ? const Padding(
+                            padding: EdgeInsets.only(right: 10),
+                            child: Icon(
+                              Icons.arrow_forward_ios,
+                              color: Color(0xFF359BE5),
+                              size: 18,
+                            ),
+                          )
+                        : const SizedBox()
                   ],
                 ),
               ),
