@@ -34,7 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // TODO: ListView with item card component
       body: Column(
         children: [
           // AppBar is placed inside body to avoid showing white line at the bottom of AppBar
@@ -42,12 +41,71 @@ class _HomeScreenState extends State<HomeScreen> {
             headerTitle: 'Guest List',
             headerHasBackButton: false,
           ),
-          // TODO: Home Screen search bar
           Container(
             color: const Color(0xFF3B9DF6),
-            height: 80,
-            child: Row(
-              children: [],
+            height: 90,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 40,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Image.asset("assets/icons/search.png"),
+                          ),
+                          const Expanded(
+                            child: SizedBox(
+                              height: 40,
+                              child: TextField(
+                                style: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  fontSize: 12,
+                                ),
+                                decoration: InputDecoration(
+                                  contentPadding: EdgeInsets.all(10),
+                                  hintText: 'Search your guest name',
+                                  hintStyle: TextStyle(
+                                    color: Color(0xFF9C9DA7),
+                                    fontFamily: 'Roboto',
+                                    fontSize: 13,
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide.none),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide.none),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      color: Color(0xFFEFB83E),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Image.asset(
+                        "assets/icons/filter.png",
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           items.isNotEmpty
@@ -69,7 +127,6 @@ class _HomeScreenState extends State<HomeScreen> {
               : const SizedBox(),
         ],
       ),
-
       bottomNavigationBar: const NavigationBarComponent(),
     );
   }
