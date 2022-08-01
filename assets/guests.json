@@ -24,22 +24,18 @@
                 "location": "Atra Bamboology",
                 "checkin": "14 Dec 2021",
                 "checkout": "14 Jan 2022",
-                "details": [
-                    {
-                        "checkintime": "14:30",
-                        "checkindate": "Aug 31, 2020",
-                        "checkouttime": "10:30",
-                        "checkoutdate": "Sep 31, 2020",
-                        "nights": "3 Nights",
-                        "guest": "2",
-                        "value": "$ 31.01",
-                        "phone": "082123892893",
-                        "host": "Rafik Bukit Vista",
-                        "profile": "Bayu & Wayan",
-                        "property": "ME Villa - B (1BR)",
-                        "listing": "4BR Homey Villa in Uluwatu | Kitchen + Wifi + Pool"
-                    }
-                ]
+                "checkintime": "14:30",
+                "checkindate": "Aug 31, 2020",
+                "checkouttime": "10:30",
+                "checkoutdate": "Sep 31, 2020",
+                "nights": "3 Nights",
+                "guest": "2",
+                "value": "$ 31.01",
+                "phone": "082123892893",
+                "host": "Rafik Bukit Vista",
+                "profile": "Bayu & Wayan",
+                "property": "ME Villa - B (1BR)",
+                "listing": "4BR Homey Villa in Uluwatu | Kitchen + Wifi + Pool"
             }
         ]
       },
