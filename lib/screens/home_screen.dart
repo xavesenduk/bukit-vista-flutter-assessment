@@ -120,6 +120,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       guestPicture: items[index]["photo"],
                       guestOrigin: items[index]["origin"],
                       guestDetails: items[index]["bookings"] ?? [],
+                      guestSince: items[index]["since"] ?? '',
+                      guestEmail: items[index]["email"] ?? '',
+                      guestPhone: items[index]["phone"] ?? '',
                       guestId: items[index]["id"],
                     );
                   },
