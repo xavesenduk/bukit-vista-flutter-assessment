@@ -4,7 +4,13 @@ import 'package:flutter/material.dart';
 
 // Item card component, to display guest information in a list view.
 class ItemCard extends StatelessWidget {
-  final String guestName, guestPicture, guestOrigin, guestId;
+  final String guestName,
+      guestPicture,
+      guestOrigin,
+      guestId,
+      guestSince,
+      guestEmail,
+      guestPhone;
   final List guestDetails;
   final bool showDetailsButton;
   const ItemCard(
@@ -14,7 +20,10 @@ class ItemCard extends StatelessWidget {
       required this.guestOrigin,
       required this.guestDetails,
       required this.guestId,
-      required this.showDetailsButton})
+      required this.showDetailsButton,
+      required this.guestSince,
+      required this.guestEmail,
+      required this.guestPhone})
       : super(key: key);
 
   @override
@@ -33,7 +42,12 @@ class ItemCard extends StatelessWidget {
                   Navigator.push(context,
                       CupertinoPageRoute(builder: (builder) {
                     return Details(
-                      guestId: guestId,
+                      guestName: guestName,
+                      guestPicture: guestPicture,
+                      guestSince: guestSince,
+                      guestEmail: guestEmail,
+                      guestPhone: guestPhone,
+                      guestOrigin: guestOrigin,
                     );
                   }));
                 } else {
