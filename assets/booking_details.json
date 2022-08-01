@@ -1,0 +1,44 @@
+{
+    "items": [
+        {
+        "id": "1",
+        "bookingId": "HMASJKSSCL",
+        "bookingStatus": "Confirmed",
+        "bookingLocation": "Pondok Lulik #20",
+        "checkin": "14 Dec 2021",
+        "checkout": "14 Jan 2022",
+        "bookingCheckInTime": "14:30",
+        "bookingCheckInDate": "Aug 31, 2020",
+        "bookingCheckOutTime": "10:30",
+        "bookingCheckOutDate": "Sep 31, 2020",
+        "bookingNights": "3 Nights",
+        "bookingGuests": "2",
+        "bookingValue": "$ 31.01",
+        "bookingPhone": "082123892893",
+        "bookingHost": "Rafik Bukit Vista",
+        "bookingProfile": "Bayu & Wayan",
+        "bookingProperty": "ME Villa - B (1BR)",
+        "bookingListing": "4BR Homey Villa in Uluwatu | Kitchen + Wifi + Pool"
+    },
+    {
+        "id": "2",
+        "bookingId": "HMASJKSSCL",
+        "bookingStatus": "Canceled",
+        "bookingLocation": "Atra Bamboology",
+        "checkin": "14 Dec 2021",
+        "checkout": "14 Jan 2022",
+        "bookingCheckInTime": "14:30",
+        "bookingCheckInDate": "Aug 31, 2020",
+        "bookingCheckOutTime": "10:30",
+        "bookingCheckOutDate": "Sep 31, 2020",
+        "bookingNights": "3 Nights",
+        "bookingGuests": "2",
+        "bookingValue": "$ 31.01",
+        "bookingPhone": "082123892893",
+        "bookingHost": "Rafik Bukit Vista",
+        "bookingProfile": "Bayu & Wayan",
+        "bookingProperty": "ME Villa - B (1BR)",
+        "bookingListing": "4BR Homey Villa in Uluwatu | Kitchen + Wifi + Pool"     
+    }
+]
+}
